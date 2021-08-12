@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Lista de Alunos</title>
+<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet" />
+<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+	rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+	
+		<div class="jumbotron">
+			<h1 class="text-center">Acadêmico ETEC</h1>
+			<h3 class="text-center">Cadastro de Alunos</h3>
+		</div>
+		<form action="/Confirmar" method="post" th:object="${aluno}">
+
+			<input type = "hidden" th:field="*{id}">
+			<div class="form-group">
+				<label for="nome">Nome do Aluno:</label> <input type="text"
+					class="form-control" th:field="*{nome}">
+			</div>
+
+			<div class="form-group">
+				<label for="endereco">Endereço:</label> <input type="text"
+					class="form-control" th:field="*{endereco}">
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email:</label> <input type="email"
+					class="form-control" th:field="*{email}">
+			</div>
+
+			<div class="form-group">
+				<label for="celular">Celular:</label> <input type="text"
+					class="form-control" th:field="*{celular}">
+			</div>
+
+			<div class="form-group">
+				<label for="data">Data de nascimento:</label> <input type="date"
+					class="form-control" th:field= "*{data_nasc}">
+			</div>
+
+			<button type="submit" class="btn btn-default">Submit</button>
+
+		</form>
+		<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+		<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}">
+			
+		</script>
+		
+	</div>
+</body>
+</html>

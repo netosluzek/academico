@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="widthdevice-width" />
+
+<title>Lista de Cursos</title>
+<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet" />
+<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+	rel="stylesheet" />
+</head>
+<body>
+
+	<div class="jumbotron">
+		<h1 class="text-center">Acadêmico ETEC</h1>
+	</div>
+
+	<div class="container">
+		<nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-center mb-3">
+			<a class="nav-item nav-link active" href="">Home</a>
+			<a class="nav-item nav-link active" href="/Listar">Alunos</a>			
+			<a class="nav-item nav-link active" href="/Cadastrar">Cadastrar</a>
+			
+			<!-- Com @RequestMapping <a class="nav-item nav-link active" href="/Alunos/Listar">Alunos</a> -->	
+			<!-- Com @RequestMapping <a class="nav-item nav-link active" href="/Cadastrar">Cadastrar</a> -->
+			
+		</nav>
+	</div>
+
+
+	<script th:src="@{/webjars/jquery/jquery.min.js}">
+		
+	</script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}">
+		
+	</script>
+</body>
+</html>
